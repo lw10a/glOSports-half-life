@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Half Life
-Type=Application
-Categories=Games
-Background=/home/player/.local/share/backgrounds/half-life.png
-Exec=env SDL_VIDEODRIVER=kmsdrm /home/player/ports/half-life/xash3d -ref gles1 -dev 1

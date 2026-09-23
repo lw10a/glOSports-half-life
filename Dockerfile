@@ -26,7 +26,7 @@ RUN mkdir -p /output/ports/half-life /staging/xash3d /output/ports/half-life/val
 
 # Download the latest xash3d armhf build, extract it to /staging/xash3d
 WORKDIR /download
-RUN wget https://github.com/FWGS/xash3d-fwgs/releases/download/continuous-freevgui/xash3d-fwgs-linux-armhf.tar.gz && \
+RUN wget https://github.com/FWGS/xash3d-fwgs/releases/download/continuous/xash3d-fwgs-linux-armhf.tar.gz && \
     tar -xzf xash3d-fwgs-linux-armhf.tar.gz -C /staging/xash3d
 
 # Copy to `output`, flattening all symlinks into real files
@@ -54,9 +54,9 @@ RUN find build/dlls    -name '*.so' -exec cp -v {} /output/ports/half-life/valve
     find build/cl_dll  -name '*.so' -exec cp -v {} /output/ports/half-life/valve/cl_dlls/ \;
 
 # Copy launcher assets to the output folder
-RUN mkdir -p /output/.local/share/applications /output/.local/share/backgrounds
-COPY half-life.desktop /output/.local/share/applications/half-life.desktop
-COPY half-life.png /output/.local/share/backgrounds/half-life.png
+RUN mkdir -p /output/.local/share/applications /output/.local/share/icons
+COPY half-life.puppy /output/.local/share/applications/half-life.puppy
+COPY half-life.png /output/.local/share/icons/half-life.png
 
 # Copy the Half Life SDK license file into the output folder
 RUN cp /build/hlsdk-portable/LICENSE /output/ports/half-life/HL1_SDK_LICENSE.txt

@@ -1,0 +1,6 @@
+[Entry]
+CATEGORY=Ports
+NAME=Half Life
+DESCRIPTION=Valve Software's groundbreaking 1998 first person shooter
+ICON=/home/player/.local/share/icons/half-life.png
+COMMAND=env SDL_VIDEODRIVER=kmsdrm /home/player/ports/half-life/xash3d -ref gles1 -dev 1
